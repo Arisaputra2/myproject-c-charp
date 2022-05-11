@@ -72,10 +72,6 @@ namespace ProjectUas
                 MessageBox.Show("Insert Data Gagal " + response);
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void textBoxNoHp_TextChanged(object sender, EventArgs e)
         {
@@ -124,12 +120,5 @@ namespace ProjectUas
             pegawai.image = Convert.ToString(selectedRow.Cells["Gambar"].Value);
         }
 
-        private void btnlogout_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            MessageBox.Show("Anda Logout");
-            Login frmlog = new Login();
-            frmlog.Show();
-        }
     }
 }

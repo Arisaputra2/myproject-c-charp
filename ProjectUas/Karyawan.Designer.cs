@@ -52,25 +52,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnDisplay = new System.Windows.Forms.Button();
             this.comboBoxJenisKelamin = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.btnlogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPegawai)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -199,7 +184,7 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(23, 405);
+            this.textBoxSearch.Location = new System.Drawing.Point(15, 405);
             this.textBoxSearch.Multiline = true;
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(498, 24);
@@ -208,7 +193,7 @@
             // dataGridViewPegawai
             // 
             this.dataGridViewPegawai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPegawai.Location = new System.Drawing.Point(23, 435);
+            this.dataGridViewPegawai.Location = new System.Drawing.Point(15, 435);
             this.dataGridViewPegawai.Name = "dataGridViewPegawai";
             this.dataGridViewPegawai.Size = new System.Drawing.Size(576, 182);
             this.dataGridViewPegawai.TabIndex = 35;
@@ -269,10 +254,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkOrchid;
-            this.panel2.Controls.Add(this.btnlogout);
             this.panel2.Controls.Add(this.btnDisplay);
             this.panel2.Controls.Add(this.comboBoxJenisKelamin);
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.textBoxNoHp);
             this.panel2.Controls.Add(this.textbox_image_path);
             this.panel2.Controls.Add(this.comboBoxPendidikan);
@@ -296,7 +279,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(194, 0);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(606, 650);
             this.panel2.TabIndex = 1;
@@ -322,19 +305,6 @@
             this.comboBoxJenisKelamin.Size = new System.Drawing.Size(214, 21);
             this.comboBoxJenisKelamin.TabIndex = 42;
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::ProjectUas.Properties.Resources.buttonX;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(576, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 21);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pictureBoxProfile
             // 
             this.pictureBoxProfile.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -346,126 +316,12 @@
             this.pictureBoxProfile.TabIndex = 29;
             this.pictureBoxProfile.TabStop = false;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.panel1);
-            this.panel3.Controls.Add(this.textBoxId);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(194, 650);
-            this.panel3.TabIndex = 42;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(194, 122);
-            this.panel5.TabIndex = 42;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Clarendon BT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(72, 51);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 32);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Coffee";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Clarendon BT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(11, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 32);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Scooter";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Location = new System.Drawing.Point(0, 330);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(194, 45);
-            this.panel4.TabIndex = 42;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Clarendon Lt BT", 14.25F);
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Image = global::ProjectUas.Properties.Resources.barang_;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 42);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "      Barang";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Location = new System.Drawing.Point(0, 243);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(194, 45);
-            this.panel1.TabIndex = 42;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DarkBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Clarendon Lt BT", 14.25F);
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Image = global::ProjectUas.Properties.Resources.employee_;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 42);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "      Pegawai";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // textBoxId
-            // 
-            this.textBoxId.Enabled = false;
-            this.textBoxId.Location = new System.Drawing.Point(0, 0);
-            this.textBoxId.Multiline = true;
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(10, 10);
-            this.textBoxId.TabIndex = 22;
-            this.textBoxId.Visible = false;
-            // 
-            // btnlogout
-            // 
-            this.btnlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnlogout.FlatAppearance.BorderSize = 0;
-            this.btnlogout.Location = new System.Drawing.Point(471, 3);
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Size = new System.Drawing.Size(75, 23);
-            this.btnlogout.TabIndex = 44;
-            this.btnlogout.Text = "Logout";
-            this.btnlogout.UseVisualStyleBackColor = false;
-            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
-            // 
             // Input_Pegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 650);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(606, 650);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Input_Pegawai";
@@ -474,18 +330,11 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
@@ -509,17 +358,7 @@
         private System.Windows.Forms.TextBox textbox_image_path;
         private System.Windows.Forms.TextBox textBoxNoHp;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.ComboBox comboBoxJenisKelamin;
         private System.Windows.Forms.Button btnDisplay;
-        private System.Windows.Forms.Button btnlogout;
     }
 }

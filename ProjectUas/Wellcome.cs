@@ -19,14 +19,24 @@ namespace ProjectUas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Input_Pegawai fdp = new Input_Pegawai();
-            fdp.Show();
+            Input_Pegawai frmInputPegawai = new Input_Pegawai();
+            frmInputPegawai.TopLevel = false;
+            frmInputPegawai.AutoScroll = true;
+            this.PanelContent.Controls.Clear();
+            this.PanelContent.Controls.Add(frmInputPegawai);
+            frmInputPegawai.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login frmLogin = new Login();
+            frmLogin.Show();
         }
     }
 }
