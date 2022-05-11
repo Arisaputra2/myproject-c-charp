@@ -115,13 +115,21 @@ namespace ProjectUas
             Pegawai pegawai = new Pegawai();
             int selectedrowindex = dataGridViewPegawai.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dataGridViewPegawai.Rows[selectedrowindex];
-            /*pegawai.pendidikan = Convert.ToInt32(selectedRow.Cells["Pendidikan"].Value);
+            pegawai.pendidikan = Convert.ToString(selectedRow.Cells["Pendidikan"].Value);
             pegawai.tempat_lahir = Convert.ToString(selectedRow.Cells["Tempat_lahir"].Value);
             pegawai.tanggal_lahir = Convert.ToString(selectedRow.Cells["Tanggal_Lahir"].Value);
-            pegawai.jenis_kelamin = Convert.ToInt32(selectedRow.Cells["Jenis_Kelamin"].Value);
+            pegawai.jenis_kelamin = Convert.ToString(selectedRow.Cells["Jenis_Kelamin"].Value);
             pegawai.alamat = Convert.ToString(selectedRow.Cells["Alamat"].Value);
-            pegawai.no_hp = Convert.ToString(selectedRow.Cells["No_Hp"].Value);*/
+            pegawai.no_hp = Convert.ToString(selectedRow.Cells["No_Hp"].Value);
             pegawai.image = Convert.ToString(selectedRow.Cells["Gambar"].Value);
+        }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MessageBox.Show("Anda Logout");
+            Login frmlog = new Login();
+            frmlog.Show();
         }
     }
 }
