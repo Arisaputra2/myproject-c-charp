@@ -29,50 +29,39 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.PanelContent = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnBarang = new System.Windows.Forms.Button();
+            this.btnPegawai = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.PanelContent.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(194, 650);
             this.panel3.TabIndex = 44;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Clarendon Lt BT", 14.25F);
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 416);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(194, 42);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Logout";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel5
             // 
@@ -106,52 +95,115 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Scooter";
             // 
-            // panel4
+            // PanelContent
             // 
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Location = new System.Drawing.Point(0, 330);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(194, 45);
-            this.panel4.TabIndex = 42;
+            this.PanelContent.BackColor = System.Drawing.Color.DarkOrchid;
+            this.PanelContent.Controls.Add(this.label1);
+            this.PanelContent.Location = new System.Drawing.Point(194, 37);
+            this.PanelContent.Name = "PanelContent";
+            this.PanelContent.Size = new System.Drawing.Size(657, 613);
+            this.PanelContent.TabIndex = 47;
             // 
-            // button3
+            // button1
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Clarendon Lt BT", 14.25F);
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Image = global::ProjectUas.Properties.Resources.barang_;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(194, 42);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "   Barang";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button1.BackgroundImage = global::ProjectUas.Properties.Resources.buttonX;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(801, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 21);
+            this.button1.TabIndex = 46;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Clarendon Lt BT", 14.25F);
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Image = global::ProjectUas.Properties.Resources.logout1;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 455);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(194, 42);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "   Logout";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnBarang
+            // 
+            this.btnBarang.FlatAppearance.BorderSize = 0;
+            this.btnBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBarang.Font = new System.Drawing.Font("Clarendon Lt BT", 14.25F);
+            this.btnBarang.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBarang.Image = global::ProjectUas.Properties.Resources.barang_;
+            this.btnBarang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBarang.Location = new System.Drawing.Point(0, 0);
+            this.btnBarang.Name = "btnBarang";
+            this.btnBarang.Size = new System.Drawing.Size(194, 42);
+            this.btnBarang.TabIndex = 0;
+            this.btnBarang.Text = "   Barang";
+            this.btnBarang.UseVisualStyleBackColor = true;
+            this.btnBarang.Click += new System.EventHandler(this.btnBarang_Click);
+            // 
+            // btnPegawai
+            // 
+            this.btnPegawai.FlatAppearance.BorderSize = 0;
+            this.btnPegawai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPegawai.Font = new System.Drawing.Font("Clarendon Lt BT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPegawai.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnPegawai.Image = global::ProjectUas.Properties.Resources.employee_;
+            this.btnPegawai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPegawai.Location = new System.Drawing.Point(0, 0);
+            this.btnPegawai.Name = "btnPegawai";
+            this.btnPegawai.Size = new System.Drawing.Size(194, 42);
+            this.btnPegawai.TabIndex = 0;
+            this.btnPegawai.Text = "    Pegawai";
+            this.btnPegawai.UseVisualStyleBackColor = true;
+            this.btnPegawai.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Location = new System.Drawing.Point(0, 243);
+            this.panel1.Controls.Add(this.btnPegawai);
+            this.panel1.Location = new System.Drawing.Point(0, 273);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(194, 45);
             this.panel1.TabIndex = 42;
             // 
-            // button2
+            // panel4
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Clarendon Lt BT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Image = global::ProjectUas.Properties.Resources.employee_;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 42);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "    Pegawai";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.panel4.Controls.Add(this.btnBarang);
+            this.panel4.Location = new System.Drawing.Point(0, 358);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(194, 45);
+            this.panel4.TabIndex = 42;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnHome);
+            this.panel2.Location = new System.Drawing.Point(0, 188);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(194, 45);
+            this.panel2.TabIndex = 46;
+            // 
+            // btnHome
+            // 
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Clarendon Lt BT", 14.25F);
+            this.btnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnHome.Image = global::ProjectUas.Properties.Resources.house1;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(194, 42);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // label1
             // 
@@ -164,34 +216,12 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "Wellcome Admin";
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::ProjectUas.Properties.Resources.buttonX;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(760, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 21);
-            this.button1.TabIndex = 46;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // PanelContent
-            // 
-            this.PanelContent.BackColor = System.Drawing.Color.DarkOrchid;
-            this.PanelContent.Controls.Add(this.label1);
-            this.PanelContent.Location = new System.Drawing.Point(194, 37);
-            this.PanelContent.Name = "PanelContent";
-            this.PanelContent.Size = new System.Drawing.Size(606, 613);
-            this.PanelContent.TabIndex = 47;
-            // 
             // Wellcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrchid;
-            this.ClientSize = new System.Drawing.Size(800, 650);
+            this.ClientSize = new System.Drawing.Size(850, 650);
             this.Controls.Add(this.PanelContent);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
@@ -202,10 +232,11 @@
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.PanelContent.ResumeLayout(false);
             this.PanelContent.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -216,13 +247,15 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBarang;
+        private System.Windows.Forms.Button btnPegawai;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel PanelContent;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Label label1;
     }
 }

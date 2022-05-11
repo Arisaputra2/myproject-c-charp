@@ -61,7 +61,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 98);
+            this.label1.Location = new System.Drawing.Point(54, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
@@ -70,7 +70,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 147);
+            this.label4.Location = new System.Drawing.Point(54, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 5;
@@ -79,7 +79,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(47, 197);
+            this.label8.Location = new System.Drawing.Point(54, 170);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(111, 13);
             this.label8.TabIndex = 17;
@@ -88,7 +88,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(47, 249);
+            this.label5.Location = new System.Drawing.Point(54, 222);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 13);
             this.label5.TabIndex = 18;
@@ -97,7 +97,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(47, 341);
+            this.label7.Location = new System.Drawing.Point(54, 314);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 13);
             this.label7.TabIndex = 19;
@@ -106,7 +106,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(47, 297);
+            this.label6.Location = new System.Drawing.Point(54, 270);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 20;
@@ -114,7 +114,7 @@
             // 
             // textBoxNama
             // 
-            this.textBoxNama.Location = new System.Drawing.Point(184, 87);
+            this.textBoxNama.Location = new System.Drawing.Point(191, 60);
             this.textBoxNama.Multiline = true;
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(214, 24);
@@ -122,7 +122,7 @@
             // 
             // textBoxTempat
             // 
-            this.textBoxTempat.Location = new System.Drawing.Point(184, 186);
+            this.textBoxTempat.Location = new System.Drawing.Point(191, 159);
             this.textBoxTempat.Multiline = true;
             this.textBoxTempat.Name = "textBoxTempat";
             this.textBoxTempat.Size = new System.Drawing.Size(83, 24);
@@ -130,7 +130,7 @@
             // 
             // textBoxAlamat
             // 
-            this.textBoxAlamat.Location = new System.Drawing.Point(184, 330);
+            this.textBoxAlamat.Location = new System.Drawing.Point(191, 303);
             this.textBoxAlamat.Multiline = true;
             this.textBoxAlamat.Name = "textBoxAlamat";
             this.textBoxAlamat.Size = new System.Drawing.Size(214, 52);
@@ -139,14 +139,14 @@
             // dateTimePickerPegawai
             // 
             this.dateTimePickerPegawai.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerPegawai.Location = new System.Drawing.Point(273, 191);
+            this.dateTimePickerPegawai.Location = new System.Drawing.Point(280, 164);
             this.dateTimePickerPegawai.Name = "dateTimePickerPegawai";
             this.dateTimePickerPegawai.Size = new System.Drawing.Size(125, 20);
             this.dateTimePickerPegawai.TabIndex = 28;
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(413, 331);
+            this.buttonClear.Location = new System.Drawing.Point(420, 304);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(75, 23);
             this.buttonClear.TabIndex = 30;
@@ -156,7 +156,7 @@
             // 
             // buttonInsert
             // 
-            this.buttonInsert.Location = new System.Drawing.Point(413, 297);
+            this.buttonInsert.Location = new System.Drawing.Point(420, 270);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(75, 23);
             this.buttonInsert.TabIndex = 31;
@@ -166,7 +166,7 @@
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(519, 297);
+            this.buttonUpdate.Location = new System.Drawing.Point(531, 270);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
             this.buttonUpdate.TabIndex = 32;
@@ -175,7 +175,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(519, 331);
+            this.buttonDelete.Location = new System.Drawing.Point(531, 304);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 23);
             this.buttonDelete.TabIndex = 33;
@@ -184,7 +184,7 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(15, 405);
+            this.textBoxSearch.Location = new System.Drawing.Point(22, 378);
             this.textBoxSearch.Multiline = true;
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(498, 24);
@@ -193,15 +193,15 @@
             // dataGridViewPegawai
             // 
             this.dataGridViewPegawai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPegawai.Location = new System.Drawing.Point(15, 435);
+            this.dataGridViewPegawai.Location = new System.Drawing.Point(22, 408);
             this.dataGridViewPegawai.Name = "dataGridViewPegawai";
-            this.dataGridViewPegawai.Size = new System.Drawing.Size(576, 182);
+            this.dataGridViewPegawai.Size = new System.Drawing.Size(584, 166);
             this.dataGridViewPegawai.TabIndex = 35;
             this.dataGridViewPegawai.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPegawai_CellContentClick);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(527, 405);
+            this.button6.Location = new System.Drawing.Point(532, 378);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 36;
@@ -210,7 +210,7 @@
             // 
             // btnUploudImage
             // 
-            this.btnUploudImage.Location = new System.Drawing.Point(413, 265);
+            this.btnUploudImage.Location = new System.Drawing.Point(420, 238);
             this.btnUploudImage.Name = "btnUploudImage";
             this.btnUploudImage.Size = new System.Drawing.Size(186, 23);
             this.btnUploudImage.TabIndex = 37;
@@ -227,14 +227,14 @@
             "SMA",
             "KULIAH",
             "Lainnya"});
-            this.comboBoxPendidikan.Location = new System.Drawing.Point(184, 139);
+            this.comboBoxPendidikan.Location = new System.Drawing.Point(191, 112);
             this.comboBoxPendidikan.Name = "comboBoxPendidikan";
             this.comboBoxPendidikan.Size = new System.Drawing.Size(214, 21);
             this.comboBoxPendidikan.TabIndex = 38;
             // 
             // textbox_image_path
             // 
-            this.textbox_image_path.Location = new System.Drawing.Point(413, 230);
+            this.textbox_image_path.Location = new System.Drawing.Point(420, 203);
             this.textbox_image_path.Multiline = true;
             this.textbox_image_path.Name = "textbox_image_path";
             this.textbox_image_path.Size = new System.Drawing.Size(186, 20);
@@ -242,7 +242,7 @@
             // 
             // textBoxNoHp
             // 
-            this.textBoxNoHp.Location = new System.Drawing.Point(184, 287);
+            this.textBoxNoHp.Location = new System.Drawing.Point(191, 260);
             this.textBoxNoHp.MaxLength = 13;
             this.textBoxNoHp.Multiline = true;
             this.textBoxNoHp.Name = "textBoxNoHp";
@@ -281,12 +281,12 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(606, 650);
+            this.panel2.Size = new System.Drawing.Size(653, 613);
             this.panel2.TabIndex = 1;
             // 
             // btnDisplay
             // 
-            this.btnDisplay.Location = new System.Drawing.Point(413, 360);
+            this.btnDisplay.Location = new System.Drawing.Point(420, 333);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(186, 39);
             this.btnDisplay.TabIndex = 43;
@@ -300,7 +300,7 @@
             this.comboBoxJenisKelamin.Items.AddRange(new object[] {
             "Laki-Laki",
             "Perempuan"});
-            this.comboBoxJenisKelamin.Location = new System.Drawing.Point(184, 241);
+            this.comboBoxJenisKelamin.Location = new System.Drawing.Point(191, 214);
             this.comboBoxJenisKelamin.Name = "comboBoxJenisKelamin";
             this.comboBoxJenisKelamin.Size = new System.Drawing.Size(214, 21);
             this.comboBoxJenisKelamin.TabIndex = 42;
@@ -309,7 +309,7 @@
             // 
             this.pictureBoxProfile.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pictureBoxProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxProfile.Location = new System.Drawing.Point(413, 36);
+            this.pictureBoxProfile.Location = new System.Drawing.Point(420, 9);
             this.pictureBoxProfile.Name = "pictureBoxProfile";
             this.pictureBoxProfile.Size = new System.Drawing.Size(186, 189);
             this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -321,7 +321,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(606, 650);
+            this.ClientSize = new System.Drawing.Size(653, 613);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Input_Pegawai";

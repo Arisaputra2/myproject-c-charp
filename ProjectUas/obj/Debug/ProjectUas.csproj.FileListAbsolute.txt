@@ -21,9 +21,8 @@ E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.csproj.CoreCompileInputs.cache
 E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.csproj.CopyComplete
 E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.exe
 E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.pdb
-E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.FormDataPegawai.resources
-E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.MDIContainer.resources
 E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.FormDaftarPegawai.resources
 E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.Input_Pegawai.resources
 E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.Wellcome.resources
 E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.Login.resources
+E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.FormHome.resources

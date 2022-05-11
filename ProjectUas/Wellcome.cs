@@ -38,5 +38,20 @@ namespace ProjectUas
             Login frmLogin = new Login();
             frmLogin.Show();
         }
+
+        private void btnBarang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            FormHome frmHome = new FormHome();
+            frmHome.TopLevel = false;
+            frmHome.AutoScroll = true;
+            this.PanelContent.Controls.Clear();
+            this.PanelContent.Controls.Add(frmHome);
+            frmHome.Show();
+        }
     }
 }

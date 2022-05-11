@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Karyawan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,12 +66,6 @@
     <Compile Include="Wellcome.Designer.cs">
       <DependentUpon>Wellcome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,32 +78,23 @@
     <Compile Include="FormDaftarPegawai.Designer.cs">
       <DependentUpon>FormDaftarPegawai.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDIContainer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MDIContainer.Designer.cs">
-      <DependentUpon>MDIContainer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pegawai.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Karyawan.resx">
       <DependentUpon>Karyawan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wellcome.resx">
       <DependentUpon>Wellcome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDaftarPegawai.resx">
       <DependentUpon>FormDaftarPegawai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDIContainer.resx">
-      <DependentUpon>MDIContainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -178,6 +169,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eyevisibility.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
