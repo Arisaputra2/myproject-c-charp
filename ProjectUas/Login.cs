@@ -15,7 +15,7 @@ namespace ProjectUas
     public partial class Login : Form 
     {
         int i;
-        MySqlConnection conn= new MySqlConnection("server = localhost; database = project; uid = root; sslMode = none; password =");
+        MySqlConnection conn= new MySqlConnection("server = localhost; database = db_project; uid = root; sslMode = none; password =");
 
         public Login()
         {
@@ -29,7 +29,7 @@ namespace ProjectUas
             conn.Open();
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from user where username ='" + textBox1.Text + "' and password= '" + textBox2.Text + "'";
+            cmd.CommandText = "SELECT * FROM user where username ='" + textBox1.Text + "' and password= '" + textBox2.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);

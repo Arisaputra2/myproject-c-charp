@@ -8,6 +8,6 @@ namespace ProjectUas
 {
     class Connection
     {
-        protected String conString = "server = localhost; database = project; uid = root; sslMode = none; password =";
+        protected String conString = "server = localhost; database = db_project; uid = root; sslMode = none; password =";
     }
 }

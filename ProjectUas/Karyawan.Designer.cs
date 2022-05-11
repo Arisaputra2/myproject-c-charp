@@ -50,26 +50,27 @@
             this.textbox_image_path = new System.Windows.Forms.TextBox();
             this.textBoxNoHp = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDisplay = new System.Windows.Forms.Button();
             this.comboBoxJenisKelamin = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxId = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
-            this.btnDisplay = new System.Windows.Forms.Button();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.btnlogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPegawai)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -268,6 +269,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkOrchid;
+            this.panel2.Controls.Add(this.btnlogout);
             this.panel2.Controls.Add(this.btnDisplay);
             this.panel2.Controls.Add(this.comboBoxJenisKelamin);
             this.panel2.Controls.Add(this.button1);
@@ -299,6 +301,16 @@
             this.panel2.Size = new System.Drawing.Size(606, 650);
             this.panel2.TabIndex = 1;
             // 
+            // btnDisplay
+            // 
+            this.btnDisplay.Location = new System.Drawing.Point(413, 360);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(186, 39);
+            this.btnDisplay.TabIndex = 43;
+            this.btnDisplay.Text = "Display Data";
+            this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
             // comboBoxJenisKelamin
             // 
             this.comboBoxJenisKelamin.FormattingEnabled = true;
@@ -309,6 +321,30 @@
             this.comboBoxJenisKelamin.Name = "comboBoxJenisKelamin";
             this.comboBoxJenisKelamin.Size = new System.Drawing.Size(214, 21);
             this.comboBoxJenisKelamin.TabIndex = 42;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ProjectUas.Properties.Resources.buttonX;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(576, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 21);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBoxProfile
+            // 
+            this.pictureBoxProfile.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBoxProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxProfile.Location = new System.Drawing.Point(413, 36);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.Size = new System.Drawing.Size(186, 189);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProfile.TabIndex = 29;
+            this.pictureBoxProfile.TabStop = false;
             // 
             // panel3
             // 
@@ -362,24 +398,6 @@
             this.panel4.Size = new System.Drawing.Size(194, 45);
             this.panel4.TabIndex = 42;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Location = new System.Drawing.Point(0, 243);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(194, 45);
-            this.panel1.TabIndex = 42;
-            // 
-            // textBoxId
-            // 
-            this.textBoxId.Enabled = false;
-            this.textBoxId.Location = new System.Drawing.Point(0, 0);
-            this.textBoxId.Multiline = true;
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(10, 10);
-            this.textBoxId.TabIndex = 22;
-            this.textBoxId.Visible = false;
-            // 
             // button3
             // 
             this.button3.FlatAppearance.BorderSize = 0;
@@ -394,6 +412,14 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "      Barang";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Location = new System.Drawing.Point(0, 243);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(194, 45);
+            this.panel1.TabIndex = 42;
             // 
             // button2
             // 
@@ -411,39 +437,27 @@
             this.button2.Text = "      Pegawai";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // textBoxId
             // 
-            this.button1.BackgroundImage = global::ProjectUas.Properties.Resources.buttonX;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(576, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 21);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.textBoxId.Enabled = false;
+            this.textBoxId.Location = new System.Drawing.Point(0, 0);
+            this.textBoxId.Multiline = true;
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(10, 10);
+            this.textBoxId.TabIndex = 22;
+            this.textBoxId.Visible = false;
             // 
-            // pictureBoxProfile
+            // btnlogout
             // 
-            this.pictureBoxProfile.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBoxProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxProfile.Location = new System.Drawing.Point(413, 36);
-            this.pictureBoxProfile.Name = "pictureBoxProfile";
-            this.pictureBoxProfile.Size = new System.Drawing.Size(186, 189);
-            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxProfile.TabIndex = 29;
-            this.pictureBoxProfile.TabStop = false;
-            // 
-            // btnDisplay
-            // 
-            this.btnDisplay.Location = new System.Drawing.Point(413, 360);
-            this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(186, 39);
-            this.btnDisplay.TabIndex = 43;
-            this.btnDisplay.Text = "Display Data";
-            this.btnDisplay.UseVisualStyleBackColor = true;
-            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            this.btnlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnlogout.FlatAppearance.BorderSize = 0;
+            this.btnlogout.Location = new System.Drawing.Point(471, 3);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(75, 23);
+            this.btnlogout.TabIndex = 44;
+            this.btnlogout.Text = "Logout";
+            this.btnlogout.UseVisualStyleBackColor = false;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // Input_Pegawai
             // 
@@ -459,13 +473,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPegawai)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -506,5 +520,6 @@
         private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.ComboBox comboBoxJenisKelamin;
         private System.Windows.Forms.Button btnDisplay;
+        private System.Windows.Forms.Button btnlogout;
     }
 }
