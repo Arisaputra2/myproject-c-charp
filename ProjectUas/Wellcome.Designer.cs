@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.PanelContent = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -58,6 +58,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(194, 650);
             this.panel3.TabIndex = 44;
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Clarendon Lt BT", 14.25F);
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 416);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(194, 42);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Logout";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel5
             // 
@@ -170,21 +185,6 @@
             this.PanelContent.Name = "PanelContent";
             this.PanelContent.Size = new System.Drawing.Size(606, 613);
             this.PanelContent.TabIndex = 47;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Clarendon Lt BT", 14.25F);
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 416);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(194, 42);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Logout";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Wellcome
             // 
