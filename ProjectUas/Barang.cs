@@ -44,8 +44,8 @@ namespace ProjectUas
                 try
                 {
                     conn.Open();
-                    MySqlDataReader rdr = cmd.ExecuteReader();
-                    dt.Load(rdr);
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    da.Fill(dt);
                     conn.Close();
                 }
                 catch (Exception e)
@@ -102,6 +102,25 @@ namespace ProjectUas
             }
             return result;
         }
+
+       /* public String Showimages()
+        {
+            string selectQuery = "SELECT * FROM data_barang.gambar_barang";
+            MySqlCommand command = new MySqlCommand(selectQuery, conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(command);
+            DataTable table = new DataTable();
+            da.Fill(table);
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }catch (Exception e)
+            {
+                return e.Message;
+            }
+            return table;
+        }*/
 
         /*public String select()
         {

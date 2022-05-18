@@ -264,6 +264,7 @@
             // 
             // gambar
             // 
+            this.gambar.DataPropertyName = "gambar_barang";
             this.gambar.HeaderText = "Gambar";
             this.gambar.Name = "gambar";
             this.gambar.ReadOnly = true;
@@ -271,7 +272,6 @@
             // 
             // foto
             // 
-            this.foto.DataPropertyName = "gambar_barang";
             this.foto.HeaderText = "Foto";
             this.foto.Name = "foto";
             this.foto.ReadOnly = true;

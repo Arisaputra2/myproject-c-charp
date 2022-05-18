@@ -17,6 +17,9 @@ namespace ProjectUas
     {
         ArrayList pegawailist = new ArrayList();
         System.Collections.ArrayList DataBarang = new ArrayList();
+        MySqlConnection conn =  new MySqlConnection("server = localhost; database = db_project; uid = root; sslMode = none; password =");
+        MySqlCommand command;
+        MySqlDataAdapter da;
         public FormBarang()
         {
             InitializeComponent();
@@ -136,7 +139,7 @@ namespace ProjectUas
         }*/
 
         private void btnDisplay_Click(object sender, EventArgs e)
-        {
+        {/*
             Barang barang = new Barang();
             DataTable dt = new DataTable();
             dt = barang.SelectAll();
@@ -144,19 +147,32 @@ namespace ProjectUas
             dataGridViewBarang.AutoGenerateColumns = false;
             dataGridViewBarang.Columns["id_barang"].Visible = true;
             dataGridViewBarang.Columns["gambar_barang"].Visible = false;
-            dataGridViewBarang.Show();
+            dataGridViewBarang.Show();*/
         }
 
         private void FormBarang_Load(object sender, EventArgs e)
         {
-            Barang barang = new Barang();
+            /*Barang barang = new Barang();
             DataTable dt = new DataTable();
             dt = barang.SelectAll();
             dataGridViewBarang.DataSource = dt;
             dataGridViewBarang.AutoGenerateColumns = false;
+            dataGridViewBarang.AllowUserToAddRows = false;
             dataGridViewBarang.Columns["id_barang"].Visible = true;
-            dataGridViewBarang.Columns["gambar_barang"].Visible = false;
-            dataGridViewBarang.Show();
+           *//* dataGridViewBarang.Columns["gambar_barang"].Visible = false;*//*
+            dataGridViewBarang.Show();*/
+            string selectQuery = "SELECT * FROM data_barang";
+            command = new MySqlCommand(selectQuery, conn);
+            da = new MySqlDataAdapter(command);
+
+            DataTable dt = new DataTable();
+            dataGridViewBarang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewBarang.RowTemplate.Height = 50;
+            dataGridViewBarang.AllowUserToAddRows = false;
+
+            da.Fill(dt);
+
+            dataGridViewBarang.DataSource = dt;
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
