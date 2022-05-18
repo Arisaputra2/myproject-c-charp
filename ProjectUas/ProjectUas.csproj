@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,11 +48,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Barang.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBarang.Designer.cs">
+      <DependentUpon>FormBarang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUbah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUbah.Designer.cs">
+      <DependentUpon>FormUbah.cs</DependentUpon>
     </Compile>
     <Compile Include="Karyawan.cs">
       <SubType>Form</SubType>
@@ -60,6 +79,7 @@
       <DependentUpon>Karyawan.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="Wellcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,8 +101,14 @@
     <Compile Include="Pegawai.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBarang.resx">
+      <DependentUpon>FormBarang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUbah.resx">
+      <DependentUpon>FormUbah.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Karyawan.resx">
       <DependentUpon>Karyawan.cs</DependentUpon>
@@ -106,6 +132,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

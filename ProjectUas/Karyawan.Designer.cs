@@ -53,6 +53,8 @@
             this.btnDisplay = new System.Windows.Forms.Button();
             this.comboBoxJenisKelamin = new System.Windows.Forms.ComboBox();
             this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPegawai)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
@@ -181,6 +183,7 @@
             this.buttonDelete.TabIndex = 33;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // textBoxSearch
             // 
@@ -207,6 +210,7 @@
             this.button6.TabIndex = 36;
             this.button6.Text = "Search";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnUploudImage
             // 
@@ -254,6 +258,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkOrchid;
+            this.panel2.Controls.Add(this.textBoxId);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.btnDisplay);
             this.panel2.Controls.Add(this.comboBoxJenisKelamin);
             this.panel2.Controls.Add(this.textBoxNoHp);
@@ -316,6 +322,24 @@
             this.pictureBoxProfile.TabIndex = 29;
             this.pictureBoxProfile.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(54, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(18, 13);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "ID";
+            // 
+            // textBoxId
+            // 
+            this.textBoxId.Enabled = false;
+            this.textBoxId.Location = new System.Drawing.Point(191, 22);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.ReadOnly = true;
+            this.textBoxId.Size = new System.Drawing.Size(214, 20);
+            this.textBoxId.TabIndex = 45;
+            // 
             // Input_Pegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,6 +350,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Input_Pegawai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Input_Pegawai_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPegawai)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -360,5 +385,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBoxJenisKelamin;
         private System.Windows.Forms.Button btnDisplay;
+        private System.Windows.Forms.TextBox textBoxId;
+        private System.Windows.Forms.Label label2;
     }
 }

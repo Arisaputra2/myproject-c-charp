@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnVisible = new System.Windows.Forms.Button();
+            this.btnInvisible = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnVisible = new System.Windows.Forms.Button();
-            this.btnInvisible = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -63,27 +63,27 @@
             this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.Enter += new System.EventHandler(this.button1_Enter);
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F);
-            this.textBox2.Location = new System.Drawing.Point(89, 348);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(273, 33);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F);
+            this.txtPassword.Location = new System.Drawing.Point(89, 348);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(273, 33);
+            this.txtPassword.TabIndex = 3;
+            this.txtPassword.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox1.Location = new System.Drawing.Point(89, 277);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(273, 33);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtUsername.Location = new System.Drawing.Point(89, 277);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(273, 33);
+            this.txtUsername.TabIndex = 2;
+            this.txtUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtUsername.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
             // label9
             // 
@@ -122,6 +122,32 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(273, 1);
             this.panel2.TabIndex = 15;
+            // 
+            // btnVisible
+            // 
+            this.btnVisible.BackgroundImage = global::ProjectUas.Properties.Resources.view;
+            this.btnVisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVisible.FlatAppearance.BorderSize = 0;
+            this.btnVisible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisible.Location = new System.Drawing.Point(368, 351);
+            this.btnVisible.Name = "btnVisible";
+            this.btnVisible.Size = new System.Drawing.Size(37, 27);
+            this.btnVisible.TabIndex = 17;
+            this.btnVisible.UseVisualStyleBackColor = true;
+            this.btnVisible.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnInvisible
+            // 
+            this.btnInvisible.BackgroundImage = global::ProjectUas.Properties.Resources.eyevisibility;
+            this.btnInvisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnInvisible.FlatAppearance.BorderSize = 0;
+            this.btnInvisible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInvisible.Location = new System.Drawing.Point(368, 351);
+            this.btnInvisible.Name = "btnInvisible";
+            this.btnInvisible.Size = new System.Drawing.Size(37, 27);
+            this.btnInvisible.TabIndex = 17;
+            this.btnInvisible.UseVisualStyleBackColor = true;
+            this.btnInvisible.Click += new System.EventHandler(this.btnInvisible_Click);
             // 
             // pictureBox2
             // 
@@ -170,32 +196,6 @@
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
-            // btnVisible
-            // 
-            this.btnVisible.BackgroundImage = global::ProjectUas.Properties.Resources.view;
-            this.btnVisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVisible.FlatAppearance.BorderSize = 0;
-            this.btnVisible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisible.Location = new System.Drawing.Point(368, 351);
-            this.btnVisible.Name = "btnVisible";
-            this.btnVisible.Size = new System.Drawing.Size(37, 27);
-            this.btnVisible.TabIndex = 17;
-            this.btnVisible.UseVisualStyleBackColor = true;
-            this.btnVisible.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnInvisible
-            // 
-            this.btnInvisible.BackgroundImage = global::ProjectUas.Properties.Resources.eyevisibility;
-            this.btnInvisible.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnInvisible.FlatAppearance.BorderSize = 0;
-            this.btnInvisible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInvisible.Location = new System.Drawing.Point(368, 351);
-            this.btnInvisible.Name = "btnInvisible";
-            this.btnInvisible.Size = new System.Drawing.Size(37, 27);
-            this.btnInvisible.TabIndex = 17;
-            this.btnInvisible.UseVisualStyleBackColor = true;
-            this.btnInvisible.Click += new System.EventHandler(this.btnInvisible_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,9 +212,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUsername);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -231,8 +231,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;

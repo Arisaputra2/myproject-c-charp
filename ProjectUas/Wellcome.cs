@@ -41,7 +41,12 @@ namespace ProjectUas
 
         private void btnBarang_Click(object sender, EventArgs e)
         {
-
+            FormBarang frmBarang = new FormBarang();
+            frmBarang.TopLevel = false;
+            frmBarang.AutoScroll = true;
+            this.PanelContent.Controls.Clear();
+            this.PanelContent.Controls.Add(frmBarang);
+            frmBarang.Show();
         }
 
         private void btnHome_Click(object sender, EventArgs e)

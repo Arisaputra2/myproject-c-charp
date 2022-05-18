@@ -14,7 +14,7 @@ namespace ProjectUas
 {
     public partial class Login : Form 
     {
-        int i;
+        /*int i;*/
         MySqlConnection conn= new MySqlConnection("server = localhost; database = db_project; uid = root; sslMode = none; password =");
 
         public Login()
@@ -25,7 +25,7 @@ namespace ProjectUas
 
         private void button1_Click(object sender, EventArgs e)
         { 
-            i = 0;
+            /*i = 0;
             conn.Open();
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -38,7 +38,7 @@ namespace ProjectUas
             if (i == 0)
             {
                 MessageBox.Show("Username dan Password Tidak Benar");
-                /*label3.Text = "Invalid Password";*/
+                *//*label3.Text = "Invalid Password";*//*
             }
             else
             {
@@ -48,6 +48,24 @@ namespace ProjectUas
                 fdp.Show();
             }
             conn.Close();
+        }*/
+
+            User user = new User();
+            user.username = txtUsername.Text;
+            user.password = txtPassword.Text;
+            if (user.validasi())
+            {
+                MessageBox.Show("User berhasil login");
+                this.Hide();
+                Wellcome frmWellcome = new Wellcome();
+                frmWellcome.Show();
+            }
+            else
+            {
+                MessageBox.Show("User gagal login");
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+            }
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -82,7 +100,7 @@ namespace ProjectUas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox2.PasswordChar = default;
+            txtPassword.PasswordChar = default;
             if (btnVisible.Visible == true)
             {
                 btnVisible.Visible = false;
@@ -92,12 +110,13 @@ namespace ProjectUas
 
         private void btnInvisible_Click(object sender, EventArgs e)
         {
-            textBox2.PasswordChar = '*';
+            txtPassword.PasswordChar = '*';
             if (btnInvisible.Visible == true)
             {
                 btnInvisible.Visible = false;
                 btnVisible.Visible = true;
             }
         }
+
     }
 }

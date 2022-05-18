@@ -47,26 +47,26 @@ namespace ProjectUas
             BinaryReader br = new BinaryReader(fstream);
             imgbt = br.ReadBytes((int)fstream.Length);
 
-            Pegawai datapegawai = new Pegawai();
-            datapegawai.nama = textBoxNama.Text;
-            /*datapegawai.id = textBoxId.Text;*/
-            datapegawai.pendidikan = comboBoxPendidikan.SelectedItem.ToString();
-            datapegawai.tempat_lahir = textBoxTempat.Text;
-            datapegawai.tanggal_lahir = dateTimePickerPegawai.Value.ToString("yyyyMMdd");
-            datapegawai.jenis_kelamin = comboBoxJenisKelamin.SelectedItem.ToString();
-            datapegawai.no_hp = textBoxNoHp.Text;
-            datapegawai.alamat = textBoxAlamat.Text;
-            datapegawai.image = pictureBoxProfile.ToString();
+            Pegawai dataBarang = new Pegawai();
+            dataBarang.nama = textBoxNama.Text;
+            dataBarang.id = textBoxId.Text;
+            dataBarang.pendidikan = comboBoxPendidikan.SelectedItem.ToString();
+            dataBarang.tempat_lahir = textBoxTempat.Text;
+            dataBarang.tanggal_lahir = dateTimePickerPegawai.Value.ToString("yyyy-MM-dd");
+            dataBarang.jenis_kelamin = comboBoxJenisKelamin.SelectedItem.ToString();
+            dataBarang.no_hp = textBoxNoHp.Text;
+            dataBarang.alamat = textBoxAlamat.Text;
+            dataBarang.image = Convert.ToString(value: pictureBoxProfile);
 
 
 
-            DaftarPegawai.Add(datapegawai);
+            DaftarPegawai.Add(dataBarang);
             DataTable dataTable = new DataTable();
             dataGridViewPegawai.DataSource = null;
             dataGridViewPegawai.DataSource = DaftarPegawai;
 
             String response;
-            response = datapegawai.Insert();
+            response = dataBarang.Insert();
             if (response == null) MessageBox.Show("Insert Data Berhasil");
             else
                 MessageBox.Show("Insert Data Gagal " + response);
@@ -92,6 +92,8 @@ namespace ProjectUas
             textbox_image_path.Text = "";
             comboBoxJenisKelamin.Text = "";
             comboBoxPendidikan.Text = "";
+            textbox_image_path.Text = "";
+            pictureBoxProfile.ImageLocation = null;
         }
 
         private void btnDisplay_Click(object sender, EventArgs e)
@@ -101,7 +103,7 @@ namespace ProjectUas
             dt = pegawai.ReadAll();
             dataGridViewPegawai.DataSource = dt;
             dataGridViewPegawai.AutoGenerateColumns = false;
-            dataGridViewPegawai.Columns["ID"].Visible = false;
+            dataGridViewPegawai.Columns["ID"].Visible = true;
             dataGridViewPegawai.Columns["Gambar"].Visible = false;
             dataGridViewPegawai.Show();
         }
@@ -120,5 +122,26 @@ namespace ProjectUas
             pegawai.image = Convert.ToString(selectedRow.Cells["Gambar"].Value);
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Input_Pegawai_Load(object sender, EventArgs e)
+        {
+            Pegawai pegawai = new Pegawai();
+            DataTable dt = new DataTable();
+            dt = pegawai.ReadAll();
+            dataGridViewPegawai.DataSource = dt;
+            dataGridViewPegawai.AutoGenerateColumns = false;
+            dataGridViewPegawai.Columns["ID"].Visible = true;
+            dataGridViewPegawai.Columns["Gambar"].Visible = false;
+            dataGridViewPegawai.Show();
+        }
     }
 }

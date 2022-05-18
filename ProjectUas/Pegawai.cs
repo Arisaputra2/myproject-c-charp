@@ -35,10 +35,11 @@ namespace ProjectUas
             String error = null;
             conn.Open();
             cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
             cmd.CommandText = "INSERT INTO data_pegawai (Nama,ID,Pendidikan,Tempat_lahir,Tanggal_Lahir,Jenis_Kelamin,Alamat,No_Hp,Gambar) " +
-                "VALUES (@Nama,@,@Pendidikan,@Tempat_lahir,@Tanggal_Lahir,@Jenis_Kelamin,@Alamat,@No_Hp,@Gambar)";
+                "VALUES (@Nama,@ID,@Pendidikan,@Tempat_lahir,@Tanggal_Lahir,@Jenis_Kelamin,@Alamat,@No_Hp,@Gambar)";
             cmd.Parameters.AddWithValue("@Nama", this.nama);
-            /*cmd.Parameters.AddWithValue("@ID", this.id);*/
+            cmd.Parameters.AddWithValue("@ID", this.id);
             cmd.Parameters.AddWithValue("@Pendidikan", this.pendidikan);
             cmd.Parameters.AddWithValue("@Tempat_lahir", this.tempat_lahir);
             cmd.Parameters.AddWithValue("@Tanggal_Lahir", this.tanggal_lahir);
@@ -46,6 +47,7 @@ namespace ProjectUas
             cmd.Parameters.AddWithValue("@Alamat", this.alamat);
             cmd.Parameters.AddWithValue("@No_Hp", this.no_hp);
             cmd.Parameters.AddWithValue("@Gambar", this.image);
+            /*cmd.Parameters.Add(new MySqlDataAdapter("@Gambar", image));*/
 
             try
             {
@@ -89,5 +91,26 @@ namespace ProjectUas
             cmd.CommandText = "select * from user where username='"++"' and password = '"++"';
             conn.Clone();
         }*/
+
+        public String Delete()
+        {
+            string result = null;
+            using (MySqlCommand cmd = new MySqlCommand("DELETE FROM data_pegawai WHERE ID=@ID ", conn))
+            {
+                cmd.Parameters.AddWithValue("@ID", this.id);
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+                catch (Exception e)
+                {
+                    return e.Message;
+                }
+            }
+            return result;
+        }
+
     }
 }

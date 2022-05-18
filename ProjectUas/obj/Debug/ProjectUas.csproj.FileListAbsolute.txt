@@ -26,3 +26,5 @@ E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.Input_Pegawai.resources
 E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.Wellcome.resources
 E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.Login.resources
 E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.FormHome.resources
+E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.FormBarang.resources
+E:\Net\ProjectUas\ProjectUas\obj\Debug\ProjectUas.FormUbah.resources
