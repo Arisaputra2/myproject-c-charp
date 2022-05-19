@@ -14,8 +14,6 @@ namespace ProjectUas
 {
     public partial class Login : Form 
     {
-        /*int i;*/
-        MySqlConnection conn= new MySqlConnection("server = localhost; database = db_project; uid = root; sslMode = none; password =");
 
         public Login()
         {
@@ -25,30 +23,6 @@ namespace ProjectUas
 
         private void button1_Click(object sender, EventArgs e)
         { 
-            /*i = 0;
-            conn.Open();
-            MySqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM user where username ='" + textBox1.Text + "' and password= '" + textBox2.Text + "'";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            da.Fill(dt);
-            i = Convert.ToInt32(dt.Rows.Count.ToString());
-            if (i == 0)
-            {
-                MessageBox.Show("Username dan Password Tidak Benar");
-                *//*label3.Text = "Invalid Password";*//*
-            }
-            else
-            {
-                MessageBox.Show("Anda Berhasil Login");
-                this.Hide();
-                Wellcome fdp = new Wellcome();
-                fdp.Show();
-            }
-            conn.Close();
-        }*/
 
             User user = new User();
             user.username = txtUsername.Text;

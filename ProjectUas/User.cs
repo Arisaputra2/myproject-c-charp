@@ -10,7 +10,7 @@ namespace ProjectUas
 {
     internal class User:Connection
     {
-        /*protected String conString = ConfigurationManager.ConnectionStrings["db_project"].ConnectionString;*/
+       /* protected String conString = "server=localhost; database=db_project; uid=root; SslMode = none; AllowLoadLocalInfile=true";*/
         static MySqlConnection conn;
         static MySqlCommand cmd;
 

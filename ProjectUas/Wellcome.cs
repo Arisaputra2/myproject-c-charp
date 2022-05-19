@@ -25,6 +25,7 @@ namespace ProjectUas
             this.PanelContent.Controls.Clear();
             this.PanelContent.Controls.Add(frmInputPegawai);
             frmInputPegawai.Show();
+            activeLabel.Text = "Kelola Pegawai";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,6 +37,7 @@ namespace ProjectUas
         {
             this.Close();
             Login frmLogin = new Login();
+            MessageBox.Show("Anda Logout");
             frmLogin.Show();
         }
 
@@ -47,6 +49,7 @@ namespace ProjectUas
             this.PanelContent.Controls.Clear();
             this.PanelContent.Controls.Add(frmBarang);
             frmBarang.Show();
+            activeLabel.Text = "Kelola Barang";
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -57,6 +60,7 @@ namespace ProjectUas
             this.PanelContent.Controls.Clear();
             this.PanelContent.Controls.Add(frmHome);
             frmHome.Show();
+            activeLabel.Text = "Home";
         }
     }
 }

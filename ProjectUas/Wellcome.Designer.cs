@@ -29,25 +29,26 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.PanelContent = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.btnBarang = new System.Windows.Forms.Button();
-            this.btnPegawai = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.Button();
+            this.btnBarang = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPegawai = new System.Windows.Forms.Button();
+            this.PanelContent = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.activeLabel = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.PanelContent.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.PanelContent.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -62,6 +63,30 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(194, 650);
             this.panel3.TabIndex = 44;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnHome);
+            this.panel2.Location = new System.Drawing.Point(0, 188);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(194, 45);
+            this.panel2.TabIndex = 46;
+            // 
+            // btnHome
+            // 
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Clarendon Lt BT", 14.25F);
+            this.btnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnHome.Image = global::ProjectUas.Properties.Resources.house1;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(194, 42);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panel5
             // 
@@ -95,28 +120,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Scooter";
             // 
-            // PanelContent
-            // 
-            this.PanelContent.BackColor = System.Drawing.Color.DarkOrchid;
-            this.PanelContent.Controls.Add(this.label1);
-            this.PanelContent.Location = new System.Drawing.Point(194, 37);
-            this.PanelContent.Name = "PanelContent";
-            this.PanelContent.Size = new System.Drawing.Size(657, 613);
-            this.PanelContent.TabIndex = 47;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::ProjectUas.Properties.Resources.buttonX;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(801, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 21);
-            this.button1.TabIndex = 46;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button4
             // 
             this.button4.FlatAppearance.BorderSize = 0;
@@ -132,6 +135,14 @@
             this.button4.Text = "   Logout";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnBarang);
+            this.panel4.Location = new System.Drawing.Point(0, 358);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(194, 45);
+            this.panel4.TabIndex = 42;
             // 
             // btnBarang
             // 
@@ -149,6 +160,14 @@
             this.btnBarang.UseVisualStyleBackColor = true;
             this.btnBarang.Click += new System.EventHandler(this.btnBarang_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnPegawai);
+            this.panel1.Location = new System.Drawing.Point(0, 273);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(194, 45);
+            this.panel1.TabIndex = 42;
+            // 
             // btnPegawai
             // 
             this.btnPegawai.FlatAppearance.BorderSize = 0;
@@ -165,45 +184,14 @@
             this.btnPegawai.UseVisualStyleBackColor = true;
             this.btnPegawai.Click += new System.EventHandler(this.button2_Click);
             // 
-            // panel1
+            // PanelContent
             // 
-            this.panel1.Controls.Add(this.btnPegawai);
-            this.panel1.Location = new System.Drawing.Point(0, 273);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(194, 45);
-            this.panel1.TabIndex = 42;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnBarang);
-            this.panel4.Location = new System.Drawing.Point(0, 358);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(194, 45);
-            this.panel4.TabIndex = 42;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnHome);
-            this.panel2.Location = new System.Drawing.Point(0, 188);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(194, 45);
-            this.panel2.TabIndex = 46;
-            // 
-            // btnHome
-            // 
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Clarendon Lt BT", 14.25F);
-            this.btnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHome.Image = global::ProjectUas.Properties.Resources.house1;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(194, 42);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.PanelContent.BackColor = System.Drawing.Color.DarkOrchid;
+            this.PanelContent.Controls.Add(this.label1);
+            this.PanelContent.Location = new System.Drawing.Point(194, 37);
+            this.PanelContent.Name = "PanelContent";
+            this.PanelContent.Size = new System.Drawing.Size(657, 613);
+            this.PanelContent.TabIndex = 47;
             // 
             // label1
             // 
@@ -216,12 +204,37 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "Wellcome Admin";
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ProjectUas.Properties.Resources.buttonX;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(801, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 21);
+            this.button1.TabIndex = 46;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // activeLabel
+            // 
+            this.activeLabel.AutoSize = true;
+            this.activeLabel.Font = new System.Drawing.Font("Clarendon BT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.activeLabel.Location = new System.Drawing.Point(212, 5);
+            this.activeLabel.Name = "activeLabel";
+            this.activeLabel.Size = new System.Drawing.Size(83, 29);
+            this.activeLabel.TabIndex = 48;
+            this.activeLabel.Text = "Home";
+            // 
             // Wellcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOrchid;
             this.ClientSize = new System.Drawing.Size(850, 650);
+            this.Controls.Add(this.activeLabel);
             this.Controls.Add(this.PanelContent);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel3);
@@ -230,14 +243,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "First";
             this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.PanelContent.ResumeLayout(false);
             this.PanelContent.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -257,5 +271,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label activeLabel;
     }
 }

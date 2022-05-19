@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace ProjectUas
 {
-    public partial class FormDaftarPegawai : Form
+    public partial class FormUbahPegawai : Form
     {
-        public FormDaftarPegawai()
+       /* Pegawai pegawai;*/
+        public FormUbahPegawai()
         {
             InitializeComponent();
+            /*this.pegawai = pegawai;*/
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void FormUbahPegawai_Load(object sender, EventArgs e)
         {
-            
+            /*textBoxNama.Text = pegawai.nama.ToString(); */
         }
     }
 }

@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
+
 namespace ProjectUas
 {
     internal class Barang:Connection
     {
-        /*protected String conString = ConfigurationManager.ConnectionStrings["dbcashier"].ConnectionString;*/
-         MySqlConnection conn;
-         MySqlCommand cmd;
+        
+        static MySqlConnection conn;
+        static MySqlCommand cmd;
 
-        public int Id { get; set; }
+        public String Id { get; set; }
         public String Kode { get; set; }
         public String Nama { get; set; }
         public int Jumlah { get; set; }
@@ -35,7 +35,7 @@ namespace ProjectUas
 
         }*/
 
-        public DataTable SelectAll()
+        public static DataTable SelectAll()
         {
             DataTable dt = new DataTable();
             //cara 1
@@ -44,8 +44,8 @@ namespace ProjectUas
                 try
                 {
                     conn.Open();
-                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                    da.Fill(dt);
+                    MySqlDataReader rdr = cmd.ExecuteReader();
+                    dt.Load(rdr);
                     conn.Close();
                 }
                 catch (Exception e)
@@ -55,6 +55,23 @@ namespace ProjectUas
             }
             return dt;
 
+            /* DataTable dt = new DataTable();
+             MySqlCommand cmd = new MySqlCommand();
+             cmd.CommandType = CommandType.Text;
+             cmd.CommandText = "SELECT * FROM data_barang";
+
+             try
+             {
+                 conn.Open();
+                 MySqlDataAdapter dat = new MySqlDataAdapter(cmd);
+                 dat.Fill(dt);
+                 conn.Close();
+             }catch (Exception e)
+             {
+                 string error = e.Message;
+             }
+             return dt;*/
+
         }
 
         public String Insert()
@@ -63,13 +80,13 @@ namespace ProjectUas
             conn.Open();
             cmd = conn.CreateCommand();
             cmd.CommandText = "INSERT INTO data_barang (id_barang,kode_barang,nama_barang,jumlah_barang,harga_barang,gambar_barang) " +
-                "VALUES (@,@kode_barang,@nama_barang,@jumlah_barang,@harga_barang,@gambar_barang)";
+                "VALUES (@id_barang,@kode_barang,@nama_barang,@jumlah_barang,@harga_barang,@gambar_barang)";
             cmd.Parameters.AddWithValue("@id_barang", this.Id);
             cmd.Parameters.AddWithValue("@kode_barang",this.Kode);
             cmd.Parameters.AddWithValue("@nama_barang", this.Nama);
             cmd.Parameters.AddWithValue("@jumlah_barang", this.Jumlah);
             cmd.Parameters.AddWithValue("@harga_barang", this.Harga);
-            cmd.Parameters.AddWithValue("@gambar_barang", this.Gambar);
+            cmd.Parameters.AddWithValue("gambar_barang",this.Gambar);
 
             try
             {
@@ -103,40 +120,51 @@ namespace ProjectUas
             return result;
         }
 
-       /* public String Showimages()
+        public string Update()
         {
-            string selectQuery = "SELECT * FROM data_barang.gambar_barang";
-            MySqlCommand command = new MySqlCommand(selectQuery, conn);
-            MySqlDataAdapter da = new MySqlDataAdapter(command);
-            DataTable table = new DataTable();
-            da.Fill(table);
-            try
+            string result = null;
+            using (MySqlCommand cmd = new MySqlCommand("UPDATE data_barang SET id_barang=@id_barang," +
+                "kode_barang=@kode_barang,nama_barang=@nama_barang,jumlah_barang=@jumlah_barang,harga_barang=@harga_barang,gambar_barang=@gambar_barang WHERE id_barang=@id_barang", conn))
             {
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-            }catch (Exception e)
-            {
-                return e.Message;
+                cmd.Parameters.AddWithValue("@id_pegawai", this.Id);
+                cmd.Parameters.AddWithValue("@nm_pegawai", this.Kode);
+                cmd.Parameters.AddWithValue("@nip", this.Nama);
+                cmd.Parameters.AddWithValue("@id_jabatan", this.Jumlah);
+                cmd.Parameters.AddWithValue("@hp", this.Harga);
+                cmd.Parameters.AddWithValue("@alamat", this.Gambar);
+               
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+                catch (Exception e)
+                {
+                    return e.Message;
+                }
             }
-            return table;
-        }*/
+            return result;
+        }
 
-        /*public String select()
+        public static DataTable select(String Nama)
         {
             DataTable dt = new DataTable();
             cmd = conn.CreateCommand();
-            if (nm_pegawai != "")
+            if (Nama != "")
             {
-                cmd.CommandText = "SELECT a.*,b.nm_jabatan FROM pegawai a LEFT JOIN jabatan b ON a.id_jabatan = b.id_jabatan WHERE a.nm_pegawai=@nm_pegawai";
-                cmd.Parameters.AddWithValue("@nm_pegawai", nm_pegawai);
+                cmd.CommandText = ("SELECT * FROM data_barang WHERE nama_barang=@nama_barang");
+                cmd.Parameters.AddWithValue("@nama_barang", Nama);
             }
-            else cmd.CommandText = "SELECT a.*,b.nm_jabatan FROM pegawai a LEFT JOIN jabatan b ON a.id_jabatan = b.id_jabatan";
+            else
+            {
+                cmd.CommandText = ("SELECT * FROM data_barang WHERE id_barang=@id_barang");
+            }
             try
             {
                 conn.Open();
-                MySqlDataReader rdr = cmd.ExecuteReader();
-                dt.Load(rdr);
+                MySqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
                 conn.Close();
             }
             catch (Exception e)
@@ -144,6 +172,6 @@ namespace ProjectUas
                 String error = e.Message;
             }
             return dt;
-        }*/
+        }
     }
 }

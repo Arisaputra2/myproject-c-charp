@@ -54,11 +54,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormBarang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormBarang.Designer.cs">
       <DependentUpon>FormBarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeletePegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeletePegawai.Designer.cs">
+      <DependentUpon>FormDeletePegawai.cs</DependentUpon>
     </Compile>
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
@@ -71,6 +82,12 @@
     </Compile>
     <Compile Include="FormUbah.Designer.cs">
       <DependentUpon>FormUbah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUbahPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUbahPegawai.Designer.cs">
+      <DependentUpon>FormUbahPegawai.cs</DependentUpon>
     </Compile>
     <Compile Include="Karyawan.cs">
       <SubType>Form</SubType>
@@ -92,23 +109,23 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDaftarPegawai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDaftarPegawai.Designer.cs">
-      <DependentUpon>FormDaftarPegawai.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pegawai.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormBarang.resx">
       <DependentUpon>FormBarang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDeletePegawai.resx">
+      <DependentUpon>FormDeletePegawai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUbah.resx">
       <DependentUpon>FormUbah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUbahPegawai.resx">
+      <DependentUpon>FormUbahPegawai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Karyawan.resx">
       <DependentUpon>Karyawan.cs</DependentUpon>
@@ -118,9 +135,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDaftarPegawai.resx">
-      <DependentUpon>FormDaftarPegawai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -142,6 +156,17 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
