@@ -33,8 +33,8 @@ namespace ProjectUas
             dataGridViewBarang.DataSource = dt;
             dataGridViewBarang.AutoGenerateColumns = false;
             dataGridViewBarang.Columns["id"].Visible = true;
-            dataGridViewBarang.Columns["foto"].Visible = true;
-            dataGridViewBarang.Columns["gambar"].Visible = true;
+           /* dataGridViewBarang.Columns["foto"].Visible = false;*/
+            dataGridViewBarang.Columns["gambar_barang"].Visible = false;
             dataGridViewBarang.Show();
 
         }
@@ -59,7 +59,7 @@ namespace ProjectUas
 
             var source = textbox_image_path.Text;
             DateTime dateTime = DateTime.Now;
-            var fileName = "img_" + dateTime.Ticks.ToString();
+            var fileName = "img_" + dateTime.Ticks.ToString() + ".jpeg";
             var destinationFolder = Path.Combine(Environment.CurrentDirectory, "gambar");
             var destination = Path.Combine(destinationFolder, fileName);
 
@@ -88,22 +88,6 @@ namespace ProjectUas
             }
             else
                 MessageBox.Show("Insert Data Gagal " + response);
-
-            //cara 2
-            /*  cmd = new MySqlCommand("INSERT INTO data_barang (id_barang,kode_barang,nama_barang,jumlah_barang,harga_barang,gambar_barang) " +
-                  "VALUES (@id_barang,@kode_barang,@nama_barang,@jumlah_barang,@harga_barang,@gambar_barang)", conn);
-              cmd.Parameters.AddWithValue("id_barang", textBoxIDbarang.Text);
-              cmd.Parameters.AddWithValue("kode_barang", comboBoxKode.Text);
-              cmd.Parameters.AddWithValue("nama_barang", comboBoxNama.Text);
-              cmd.Parameters.AddWithValue("jumlah_barang", textJumlah.Text);
-              cmd.Parameters.AddWithValue("harga_barang", textHarga.Text);
-              MemoryStream ms = new MemoryStream();
-              pictureBoxProfile.Image.Save(ms, pictureBoxProfile.Image.RawFormat);
-              cmd.Parameters.AddWithValue("gambar_barang", ms.ToArray());
-              conn.Open();
-              cmd.ExecuteNonQuery();
-              conn.Close();
-              MessageBox.Show("Data Berhasil Dimasukkan");*/
 
         }
 
@@ -145,7 +129,7 @@ namespace ProjectUas
             barang.Nama = Convert.ToString(selectedrow.Cells["nama"].Value);
             barang.Jumlah = Convert.ToInt32(selectedrow.Cells["jumlah"].Value);
             barang.Harga = Convert.ToString(selectedrow.Cells["harga"].Value);
-            barang.Gambar = Convert.ToString(selectedrow.Cells["gambar"].Value);
+            barang.Gambar = Convert.ToString(selectedrow.Cells["gambar_barang"].Value);
 
             if (Convert.ToBoolean(selectedrow.Cells["delete"].Selected) == true)
             {
@@ -165,37 +149,14 @@ namespace ProjectUas
                 }
             }
         }
-       /* private void loadDataBarang()
-        {
-            DataTable dt = new DataTable();
-            dt = Barang.SelectAll();
-            //dataGridViewPengguna.AutoGenerateColumns = false;
-            dataGridViewBarang.DataSource = dt;
-            dataGridViewBarang.Columns["id_barang"].Visible = false;
-            dataGridViewBarang.Columns["kode_barang"].Visible = false;
-            dataGridViewBarang.Columns["nama_barang"].Visible = false;
-            dataGridViewBarang.Columns["harga_barang"].Visible = false;
-            dataGridViewBarang.RowHeadersVisible = false;
-            dataGridViewBarang.Show();
-        }*/
 
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
-            Barang barang = new Barang();
-            DataTable dt = new DataTable();
-            dt = Barang.SelectAll();
-            dataGridViewBarang.DataSource = dt;
-            dataGridViewBarang.AutoGenerateColumns = false;
-           /* dataGridViewBarang.Columns["id_barang"].Visible = true;
-            dataGridViewBarang.Columns["gambar_barang"].Visible = false;*/
-            dataGridViewBarang.Show();
-
-
-
+            display_data();
         }
 
-       
+
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             Barang dataBarang = new Barang();
@@ -208,7 +169,7 @@ namespace ProjectUas
             //image
             var source = textbox_image_path.Text;
             DateTime dateTime = DateTime.Now;
-            var fileName = "img_" + dateTime.Ticks.ToString();
+            var fileName = "img_" + dateTime.Ticks.ToString() + ".jpeg";
             var destinationFolder = Path.Combine(Environment.CurrentDirectory, "Gambar");
             var destination = Path.Combine(destinationFolder, fileName);
 
@@ -228,7 +189,7 @@ namespace ProjectUas
             if (response == null)
             {
                 MessageBox.Show("Ubah barang berhasil");
-                this.Close();
+                display_data();
             }
             else
             {
@@ -244,8 +205,7 @@ namespace ProjectUas
             dataGridViewBarang.AutoGenerateColumns = false;
             dataGridViewBarang.DataSource = dt;
             dataGridViewBarang.Columns["id"].Visible = true;
-            dataGridViewBarang.Columns["foto"].Visible = false;
-            dataGridViewBarang.Columns["gambar"].Visible = false;
+            dataGridViewBarang.Columns["foto"].Visible = true;
             dataGridViewBarang.RowHeadersVisible = false;
             dataGridViewBarang.RowTemplate.MinimumHeight = 60;
             dataGridViewBarang.Show();
@@ -253,7 +213,7 @@ namespace ProjectUas
 
         private void dataGridViewBarang_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (dataGridViewBarang.Columns[e.ColumnIndex].Name == "gambar_barang")
+            if (dataGridViewBarang.Columns[e.ColumnIndex].Name == "foto")
             {
                 // Your code would go here - below is just the code I used to test 
                 string s = dataGridViewBarang.Rows[e.RowIndex].Cells["gambar_barang"].Value.ToString();//
@@ -275,18 +235,11 @@ namespace ProjectUas
             dataGridViewBarang.DataSource = dt;
             dataGridViewBarang.AutoGenerateColumns = false;
             dataGridViewBarang.AllowUserToAddRows = false;
-            dataGridViewBarang.Columns["foto"].Visible = false;
-            
-            /*dataGridViewBarang.Columns["foto"].Visible = true;*/
-       /*     comboBoxNama.Text = barang.Nama;
-            comboBoxKode.Text = barang.Kode;
-            textJumlah.Text = barang.Jumlah.ToString();
-            textHarga.Text = barang.Harga;
-
-            textbox_image_path.Text = barang.Gambar.ToString();
-            if (textbox_image_path != "") pictureBoxProfile.Image = Bitmap(textbox_image_path.Text);*/
-
+            dataGridViewBarang.Columns["foto"].Visible = true;
+            dataGridViewBarang.Columns["gambar_barang"].Visible = false;
             dataGridViewBarang.Show();
+
+
         }
 
         private void label5_Click(object sender, EventArgs e)

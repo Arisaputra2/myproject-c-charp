@@ -51,7 +51,7 @@
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.foto = new System.Windows.Forms.DataGridViewImageColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gambar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gambar_barang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -207,7 +207,7 @@
             this.delete,
             this.foto,
             this.id,
-            this.Gambar,
+            this.gambar_barang,
             this.kode,
             this.nama,
             this.jumlah,
@@ -298,13 +298,13 @@
             this.id.Name = "id";
             this.id.ReadOnly = true;
             // 
-            // Gambar
+            // gambar_barang
             // 
-            this.Gambar.DataPropertyName = "gambar_barang";
-            this.Gambar.HeaderText = "Gambar";
-            this.Gambar.Name = "Gambar";
-            this.Gambar.ReadOnly = true;
-            this.Gambar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.gambar_barang.DataPropertyName = "gambar_barang";
+            this.gambar_barang.HeaderText = "Gambar";
+            this.gambar_barang.Name = "gambar_barang";
+            this.gambar_barang.ReadOnly = true;
+            this.gambar_barang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // kode
             // 
@@ -397,7 +397,7 @@
         private System.Windows.Forms.DataGridViewButtonColumn delete;
         private System.Windows.Forms.DataGridViewImageColumn foto;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gambar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gambar_barang;
         private System.Windows.Forms.DataGridViewTextBoxColumn kode;
         private System.Windows.Forms.DataGridViewTextBoxColumn nama;
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlah;

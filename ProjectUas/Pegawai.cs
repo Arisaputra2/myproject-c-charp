@@ -112,8 +112,8 @@ namespace ProjectUas
         public String Update()
         {
             String result = null;
-            using (MySqlCommand cmd = new MySqlCommand("UPDATE data_pegawai set Nama=@Nama" +
-                "Pendidikan=@Pendidikan,Tempat_lahir=@Tempat_lahir,Tanggal_Lahir=@Tanggal_Lahir,Jenis_Kelamin=@Jenis_Kelamin" +
+            using (MySqlCommand cmd = new MySqlCommand("UPDATE data_pegawai set Nama=@Nama," +
+                "Pendidikan=@Pendidikan,Tempat_lahir=@Tempat_lahir,Tanggal_Lahir=@Tanggal_Lahir,Jenis_Kelamin=@Jenis_Kelamin," +
                 "Alamat=@Alamat,No_Hp=@No_Hp,Gambar=@Gambar WHERE ID=@ID", conn))
             {
                 cmd.Parameters.AddWithValue("@Nama", this.nama);

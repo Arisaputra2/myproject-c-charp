@@ -18,8 +18,7 @@ namespace ProjectUas
         ArrayList pegawailist = new ArrayList();
         System.Collections.ArrayList DaftarPegawai = new ArrayList();
         MySqlConnection conn = new MySqlConnection("server = localhost; database = db_project; uid = root; sslMode = none; password =");
-        MySqlCommand cmd;
-
+        
         public Input_Pegawai()
         {
             InitializeComponent();
@@ -34,8 +33,9 @@ namespace ProjectUas
             dataGridViewPegawai.DataSource = dt;
             dataGridViewPegawai.AutoGenerateColumns = false;
             dataGridViewPegawai.Columns["ID"].Visible = true;
-            dataGridViewPegawai.Columns["gambar"].Visible = false;
+            dataGridViewPegawai.Columns["foto"].Visible = true;
             dataGridViewPegawai.Columns["Gambar"].Visible = false;
+            dataGridViewPegawai.RowTemplate.Height = 50;
             dataGridViewPegawai.Show();
         }
 
@@ -75,7 +75,7 @@ namespace ProjectUas
 
             var source = textbox_image_path.Text;
             DateTime dateTime = DateTime.Now;
-            var fileName = "img_" + dateTime.Ticks.ToString();
+            var fileName = "img_" + dateTime.Ticks.ToString() + ".jpeg";
             var destinationFolder = Path.Combine(Environment.CurrentDirectory, "Gambar");
             var destination = Path.Combine(destinationFolder, fileName);
 
@@ -105,24 +105,6 @@ namespace ProjectUas
             else if (response != null)
                 MessageBox.Show("Insert Data Gagal " + response);
 
-            //cara 2
-            /* cmd =  new MySqlCommand("INSERT INTO data_pegawai (Nama,ID,Pendidikan,Tempat_lahir,Tanggal_Lahir,Jenis_Kelamin,Alamat,No_Hp,Gambar) " +
-                 "VALUES (@Nama,@ID,@Pendidikan,@Tempat_lahir,@Tanggal_Lahir,@Jenis_Kelamin,@Alamat,@No_Hp,@Gambar)",conn);
-             cmd.Parameters.AddWithValue("Nama", textBoxNama.Text);
-             cmd.Parameters.AddWithValue("ID",textBoxId.Text);
-             cmd.Parameters.AddWithValue("Pendidikan", comboBoxPendidikan.Text);
-             cmd.Parameters.AddWithValue("Tempat_lahir", textBoxTempat.Text);
-             cmd.Parameters.AddWithValue("Tanggal_Lahir", dateTimePickerPegawai.Value.ToString("yyyy-MM-dd"));
-             cmd.Parameters.AddWithValue("Jenis_Kelamin", comboBoxJenisKelamin.Text);
-             cmd.Parameters.AddWithValue("Alamat", textBoxAlamat.Text);
-             cmd.Parameters.AddWithValue("No_Hp", textBoxNoHp.Text);
-             MemoryStream ms = new MemoryStream();
-             pictureBoxProfile.Image.Save(ms, pictureBoxProfile.Image.RawFormat);
-             cmd.Parameters.AddWithValue("Gambar", ms.ToArray());
-             conn.Open();
-             cmd.ExecuteNonQuery();
-             conn.Close();
-             MessageBox.Show("data insert berhasil");*/
         }
 
 
@@ -159,7 +141,8 @@ namespace ProjectUas
             dataGridViewPegawai.DataSource = dt;
             dataGridViewPegawai.AutoGenerateColumns = false;
             dataGridViewPegawai.Columns["ID"].Visible = true;
-            dataGridViewPegawai.Columns["Gambar"].Visible = false;
+            dataGridViewPegawai.Columns["Gambar"].Visible = true;
+            dataGridViewPegawai.Columns["foto"].Visible = true;
             dataGridViewPegawai.Show();
         }
 
@@ -213,7 +196,7 @@ namespace ProjectUas
             dataGridViewPegawai.DataSource = dt;
             dataGridViewPegawai.Columns["id"].Visible = true;
             dataGridViewPegawai.Columns["foto"].Visible = false;
-            dataGridViewPegawai.Columns["gambar"].Visible = false;
+            dataGridViewPegawai.Columns["Gambar"].Visible = true;
             dataGridViewPegawai.RowHeadersVisible = false;
             dataGridViewPegawai.RowTemplate.MinimumHeight = 60;
             dataGridViewPegawai.Show();
@@ -221,15 +204,16 @@ namespace ProjectUas
 
         private void Input_Pegawai_Load(object sender, EventArgs e)
         {
-            Pegawai pegawai = new Pegawai();
+            /*Pegawai pegawai = new Pegawai();
             DataTable dt = new DataTable();
             dt = Pegawai.ReadAll();
             dataGridViewPegawai.DataSource = dt;
             dataGridViewPegawai.AutoGenerateColumns = false;
-            /*dataGridViewPegawai.Columns["ID"].Visible = true;*/
+            *//*dataGridViewPegawai.Columns["ID"].Visible = true;*//*
             dataGridViewPegawai.Columns["Gambar"].Visible = true;
             dataGridViewPegawai.Columns["foto"].Visible = false;
-            dataGridViewPegawai.Show();
+            dataGridViewPegawai.Show();*/
+            display_data();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -287,7 +271,7 @@ namespace ProjectUas
 
             Pegawai dataPegawai = new Pegawai();
             dataPegawai.nama = textBoxNama.Text;
-            dataPegawai.id = labelId.Text;
+            dataPegawai.id = textBoxId.Text;
             dataPegawai.pendidikan = comboBoxPendidikan.SelectedItem.ToString();
             dataPegawai.tempat_lahir = textBoxTempat.Text;
             dataPegawai.tanggal_lahir = dateTimePickerPegawai.Value.ToString("yyyy-MM-dd");
@@ -298,7 +282,7 @@ namespace ProjectUas
             //image
             var source = textbox_image_path.Text;
             DateTime dateTime = DateTime.Now;
-            var fileName = "img_" + dateTime.Ticks.ToString();
+            var fileName = "img_" + dateTime.Ticks.ToString() + ".jpeg";
             var destinationFolder = Path.Combine(Environment.CurrentDirectory, "Gambar");
             var destination = Path.Combine(destinationFolder, fileName);
 
@@ -318,7 +302,7 @@ namespace ProjectUas
             if (response == null)
             {
                 MessageBox.Show("Ubah pegawai berhasil");
-                this.Close();
+                display_data();
             }
             else
             {
@@ -329,11 +313,6 @@ namespace ProjectUas
             /*conn.Open();
             MySqlCommand cmd = new MySqlCommand("UPDATE data_pegawai Nama = '" + textBoxNama.Text + "',Pendidikan = '" + comboBoxPendidikan.Text + "',Tempat_lahir = '" + textBoxTempat.Text + "',Tanggal_Lahir = '" + dateTimePickerPegawai.Text + "',Jenis_Kelamin ='" +comboBoxJenisKelamin.Text + "',No_Hp = '" + textBoxNoHp.Text + "',Alamat = '" + textBoxAlamat + "'",conn);
         */
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
@@ -394,13 +373,13 @@ namespace ProjectUas
 
         private void dataGridViewPegawai_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            /*if (dataGridViewPegawai.Columns[e.ColumnIndex].Name == "foto")
+            if (dataGridViewPegawai.Columns[e.ColumnIndex].Name == "foto")
             {
                 // Your code would go here - below is just the code I used to test 
                 string s = dataGridViewPegawai.Rows[e.RowIndex].Cells["gambar"].Value.ToString();//
                 if (s != "") e.Value = Image.FromFile(s);
                 else e.Value = null;
-            }*/
+            }
         }
     }
 }

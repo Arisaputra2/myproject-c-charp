@@ -43,18 +43,6 @@
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.dataGridViewPegawai = new System.Windows.Forms.DataGridView();
-            this.button6 = new System.Windows.Forms.Button();
-            this.btnUploudImage = new System.Windows.Forms.Button();
-            this.comboBoxPendidikan = new System.Windows.Forms.ComboBox();
-            this.textbox_image_path = new System.Windows.Forms.TextBox();
-            this.textBoxNoHp = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnDisplay = new System.Windows.Forms.Button();
-            this.comboBoxJenisKelamin = new System.Windows.Forms.ComboBox();
-            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
-            this.labelId = new System.Windows.Forms.Label();
             this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.foto = new System.Windows.Forms.DataGridViewImageColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +54,18 @@
             this.jenis_kelamin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.no_hp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alamat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnUploudImage = new System.Windows.Forms.Button();
+            this.comboBoxPendidikan = new System.Windows.Forms.ComboBox();
+            this.textbox_image_path = new System.Windows.Forms.TextBox();
+            this.textBoxNoHp = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.labelId = new System.Windows.Forms.Label();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnDisplay = new System.Windows.Forms.Button();
+            this.comboBoxJenisKelamin = new System.Windows.Forms.ComboBox();
+            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPegawai)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
@@ -233,6 +233,91 @@
             this.dataGridViewPegawai.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPegawai_CellContentClick);
             this.dataGridViewPegawai.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewPegawai_CellFormatting);
             // 
+            // delete
+            // 
+            this.delete.HeaderText = "Delete";
+            this.delete.Name = "delete";
+            this.delete.ReadOnly = true;
+            this.delete.Text = "Delete";
+            this.delete.ToolTipText = "Delete";
+            this.delete.UseColumnTextForButtonValue = true;
+            this.delete.Width = 60;
+            // 
+            // foto
+            // 
+            this.foto.HeaderText = "Foto";
+            this.foto.MinimumWidth = 10;
+            this.foto.Name = "foto";
+            this.foto.ReadOnly = true;
+            this.foto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.foto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "ID";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // gambar
+            // 
+            this.gambar.DataPropertyName = "Gambar";
+            this.gambar.HeaderText = "Gambar";
+            this.gambar.MinimumWidth = 10;
+            this.gambar.Name = "gambar";
+            this.gambar.ReadOnly = true;
+            this.gambar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.gambar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // nama
+            // 
+            this.nama.DataPropertyName = "Nama";
+            this.nama.HeaderText = "Nama";
+            this.nama.Name = "nama";
+            this.nama.ReadOnly = true;
+            // 
+            // pendidikan
+            // 
+            this.pendidikan.DataPropertyName = "Pendidikan";
+            this.pendidikan.HeaderText = "Pendidikan";
+            this.pendidikan.Name = "pendidikan";
+            this.pendidikan.ReadOnly = true;
+            // 
+            // tempat_lahir
+            // 
+            this.tempat_lahir.DataPropertyName = "Tempat_lahir";
+            this.tempat_lahir.HeaderText = "Tempat Lahir";
+            this.tempat_lahir.Name = "tempat_lahir";
+            this.tempat_lahir.ReadOnly = true;
+            // 
+            // tanggal_lahir
+            // 
+            this.tanggal_lahir.DataPropertyName = "Tanggal_Lahir";
+            this.tanggal_lahir.HeaderText = "Tanggal Lahir";
+            this.tanggal_lahir.Name = "tanggal_lahir";
+            this.tanggal_lahir.ReadOnly = true;
+            // 
+            // jenis_kelamin
+            // 
+            this.jenis_kelamin.DataPropertyName = "Jenis_Kelamin";
+            this.jenis_kelamin.HeaderText = "Jenis Kelamin";
+            this.jenis_kelamin.Name = "jenis_kelamin";
+            this.jenis_kelamin.ReadOnly = true;
+            // 
+            // no_hp
+            // 
+            this.no_hp.DataPropertyName = "No_Hp";
+            this.no_hp.HeaderText = "No. Hp";
+            this.no_hp.Name = "no_hp";
+            this.no_hp.ReadOnly = true;
+            // 
+            // alamat
+            // 
+            this.alamat.DataPropertyName = "Alamat";
+            this.alamat.HeaderText = "Alamat";
+            this.alamat.Name = "alamat";
+            this.alamat.ReadOnly = true;
+            // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(533, 405);
@@ -322,7 +407,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(653, 613);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // labelId
+            // 
+            this.labelId.AutoSize = true;
+            this.labelId.Location = new System.Drawing.Point(641, 9);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(0, 13);
+            this.labelId.TabIndex = 46;
             // 
             // textBoxId
             // 
@@ -377,99 +469,6 @@
             this.pictureBoxProfile.TabIndex = 29;
             this.pictureBoxProfile.TabStop = false;
             this.pictureBoxProfile.Click += new System.EventHandler(this.pictureBoxProfile_Click);
-            // 
-            // labelId
-            // 
-            this.labelId.AutoSize = true;
-            this.labelId.Location = new System.Drawing.Point(641, 9);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(0, 13);
-            this.labelId.TabIndex = 46;
-            // 
-            // delete
-            // 
-            this.delete.HeaderText = "Delete";
-            this.delete.Name = "delete";
-            this.delete.ReadOnly = true;
-            this.delete.Text = "Delete";
-            this.delete.ToolTipText = "Delete";
-            this.delete.UseColumnTextForButtonValue = true;
-            this.delete.Width = 60;
-            // 
-            // foto
-            // 
-            this.foto.HeaderText = "Foto";
-            this.foto.MinimumWidth = 10;
-            this.foto.Name = "foto";
-            this.foto.ReadOnly = true;
-            this.foto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.foto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "ID";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // gambar
-            // 
-            this.gambar.DataPropertyName = "Gambar";
-            this.gambar.HeaderText = "Gambar";
-            this.gambar.MinimumWidth = 10;
-            this.gambar.Name = "gambar";
-            this.gambar.ReadOnly = true;
-            this.gambar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.gambar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // nama
-            // 
-            this.nama.DataPropertyName = "Nama";
-            this.nama.HeaderText = "Nama";
-            this.nama.Name = "nama";
-            this.nama.ReadOnly = true;
-            // 
-            // pendidikan
-            // 
-            this.pendidikan.DataPropertyName = "Pendidikan";
-            this.pendidikan.HeaderText = "Pendidikan";
-            this.pendidikan.Name = "pendidikan";
-            this.pendidikan.ReadOnly = true;
-            // 
-            // tempat_lahir
-            // 
-            this.tempat_lahir.DataPropertyName = "Tempat_lahir";
-            this.tempat_lahir.HeaderText = "Tempat Lahir";
-            this.tempat_lahir.Name = "tempat_lahir";
-            this.tempat_lahir.ReadOnly = true;
-            // 
-            // tanggal_lahir
-            // 
-            this.tanggal_lahir.DataPropertyName = "Tanggal_Lahir";
-            this.tanggal_lahir.HeaderText = "Tanggal Lahir";
-            this.tanggal_lahir.Name = "tanggal_lahir";
-            this.tanggal_lahir.ReadOnly = true;
-            // 
-            // jenis_kelamin
-            // 
-            this.jenis_kelamin.DataPropertyName = "Jenis_Kelamin";
-            this.jenis_kelamin.HeaderText = "Jenis Kelamin";
-            this.jenis_kelamin.Name = "jenis_kelamin";
-            this.jenis_kelamin.ReadOnly = true;
-            // 
-            // no_hp
-            // 
-            this.no_hp.DataPropertyName = "No_Hp";
-            this.no_hp.HeaderText = "No. Hp";
-            this.no_hp.Name = "no_hp";
-            this.no_hp.ReadOnly = true;
-            // 
-            // alamat
-            // 
-            this.alamat.DataPropertyName = "Alamat";
-            this.alamat.HeaderText = "Alamat";
-            this.alamat.Name = "alamat";
-            this.alamat.ReadOnly = true;
             // 
             // Input_Pegawai
             // 

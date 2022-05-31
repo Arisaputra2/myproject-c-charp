@@ -123,15 +123,16 @@ namespace ProjectUas
         public string Update()
         {
             string result = null;
-            using (MySqlCommand cmd = new MySqlCommand("UPDATE data_barang SET id_barang=@id_barang," +
-                "kode_barang=@kode_barang,nama_barang=@nama_barang,jumlah_barang=@jumlah_barang,harga_barang=@harga_barang,gambar_barang=@gambar_barang WHERE id_barang=@id_barang", conn))
+            using (MySqlCommand cmd = new MySqlCommand("UPDATE data_barang SET nama_barang=@nama_barang," +
+                "kode_barang=@kode_barang,jumlah_barang=@jumlah_barang,harga_barang=@harga_barang" +
+                ",gambar_barang=@gambar_barang WHERE id_barang=@id_barang", conn))
             {
-                cmd.Parameters.AddWithValue("@id_pegawai", this.Id);
-                cmd.Parameters.AddWithValue("@nm_pegawai", this.Kode);
-                cmd.Parameters.AddWithValue("@nip", this.Nama);
-                cmd.Parameters.AddWithValue("@id_jabatan", this.Jumlah);
-                cmd.Parameters.AddWithValue("@hp", this.Harga);
-                cmd.Parameters.AddWithValue("@alamat", this.Gambar);
+                cmd.Parameters.AddWithValue("@id_barang", this.Id);
+                cmd.Parameters.AddWithValue("@kode_barang", this.Kode);
+                cmd.Parameters.AddWithValue("@nama_barang", this.Nama);
+                cmd.Parameters.AddWithValue("@jumlah_barang", this.Jumlah);
+                cmd.Parameters.AddWithValue("@harga_barang", this.Harga);
+                cmd.Parameters.AddWithValue("@gambar_barang", this.Gambar);
                
                 try
                 {
