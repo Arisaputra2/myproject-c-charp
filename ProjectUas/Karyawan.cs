@@ -364,11 +364,13 @@ namespace ProjectUas
                 comboBoxJenisKelamin.Text = dataGridViewPegawai.CurrentRow.Cells["jenis_kelamin"].Value.ToString();
                 textBoxNoHp.Text = dataGridViewPegawai.CurrentRow.Cells["no_hp"].Value.ToString();
                 textBoxAlamat.Text = dataGridViewPegawai.CurrentRow.Cells["alamat"].Value.ToString();
-           /* MemoryStream ms = new MemoryStream();
-            Bitmap img = (Bitmap)dataGridViewPegawai.CurrentRow.Cells["foto"].Value;
-            img.Save(ms, ImageFormat.Jpeg);
-            pictureBoxProfile.Image = Image.FromStream(ms);*/
-
+                int id = Convert.ToInt32(dataGridViewPegawai.Rows[e.RowIndex].Cells["id"].FormattedValue);
+                MySqlConnection conn = new MySqlConnection("server = localhost; database = db_project; uid = root; sslMode = none; password =");
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("SELECT gambar FROM data_pegawai WHERE id ='" +id+ "'",conn);
+                string img = cmd.ExecuteScalar().ToString();
+                pictureBoxProfile.Image = Image.FromFile(img);
+                conn.Close();
         }
 
         private void dataGridViewPegawai_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

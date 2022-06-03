@@ -264,7 +264,14 @@ namespace ProjectUas
             comboBoxNama.Text = dataGridViewBarang.CurrentRow.Cells["nama"].Value.ToString();
             textJumlah.Text = dataGridViewBarang.CurrentRow.Cells["jumlah"].Value.ToString();
             textHarga.Text = dataGridViewBarang.CurrentRow.Cells["harga"].Value.ToString();
-           /* pictureBoxProfile.Image = Convert.ToString(dataGridViewBarang.CurrentRow.Cells["gambar_barang"].Value);*/
+            /* pictureBoxProfile.Image = Convert.ToString(dataGridViewBarang.CurrentRow.Cells["gambar_barang"].Value);*/
+            int id = Convert.ToInt32(dataGridViewBarang.Rows[e.RowIndex].Cells["id"].FormattedValue);
+            MySqlConnection conn = new MySqlConnection("server = localhost; database = db_project; uid = root; sslMode = none; password =");
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT gambar_barang FROM data_barang WHERE id_barang ='" + id + "'", conn);
+            string img = cmd.ExecuteScalar().ToString();
+            pictureBoxProfile.Image = Image.FromFile(img);
+            conn.Close();
         }
     }
 }
